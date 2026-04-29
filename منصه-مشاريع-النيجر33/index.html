@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niger Projects Management</title>
+    <script src="/config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#050811',
+              secondary: '#0d1321',
+              niger: {
+                orange: '#E05206',
+                white: '#FFFFFF',
+                green: '#0DB02B'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              cairo: ['Cairo', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050811;
+        font-family: 'Inter', sans-serif;
+        color: white;
+      }
+      
+      [dir="rtl"] {
+        font-family: 'Cairo', sans-serif;
+      }
+
+      /* RTL specific input alignment for numbers to stay English-friendly */
+      [dir="rtl"] input[type="number"] {
+        text-align: right;
+        direction: ltr;
+      }
+
+      .bg-niger-striped {
+        background: linear-gradient(
+          to bottom,
+          #E05206 0%, #E05206 33.33%,
+          #FFFFFF 33.33%, #FFFFFF 66.66%,
+          #0DB02B 66.66%, #0DB02B 100%
+        );
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #050811; }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+    </style>
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
